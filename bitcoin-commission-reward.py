@@ -66,8 +66,9 @@ def main():
                     update_max_block = True
                 stats[current_block] = block_stats
                 if end_block > max_block:
-                    update_max_block = max_block > 0
                     max_block = end_block
+                    if max_block > 0:
+                        update_max_block = True
 
 
     # Print individual block stats
